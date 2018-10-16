@@ -85,7 +85,9 @@ iris[(nrow(iris)-1):nrow(iris), (ncol(iris)-1):ncol(iris)]
 iris[iris$Sepal.Width > 3,]
 iris[which(iris$Sepal.Width >3),]
 
-subset(iris, Species == "versicolor")
+vsT <- subset(iris, Species == "versicolor")
+
+
 ```
 
 
