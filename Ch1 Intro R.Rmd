@@ -24,6 +24,15 @@ example <- data.frame(
 "OC" = c(20,14,15,05,12,15,07,21,25,30,05,28)
 ) 
 
+
 TT.plot(class.sys = "USDA.TT", tri.data = example)
 ```
+
+
+
+
+
+
+
+
 
