@@ -9,4 +9,91 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## R exercises
+
+```{r}
+## Q1
+sqrt(729)
+## Q2
+b <- 1947.0
+## Q3
+b <- as.character(b)
+## Q4
+## Current workfolder -> github/GithubRepoR
+## Q5
+myEnv <- new.env()
+assign('b', 3, envir = myEnv)
+get('b', envir = myEnv)
+rm(b, envir = myEnv)
+## Q6
+VNum <- c(1,2,3,4,5,6)
+class(VNum)
+
+VFact <- c(1,'a', 2, 'b')
+class(VFact)
+## Q7
+# Inicializando vector
+cvI <- character(11)
+# Impresion vector
+cvI
+# Llenando vector
+mF <- c("a", "b", "c")
+# Longitud de vector
+length(mF)
+# selccionar valores
+mF[1:2]
+# Seleccionar valores
+mF[c(2,3)]
+# Normal
+sort(mF)
+mF[order(mF)]
+# Inversion
+sort(mF, decreasing = TRUE)
+mF[rev(order(mF))]
+
+# Q9
+# Rep? --> inicia con los valores ()
+# seq -> continua con los valores ()
+out <- c(rep('a', 2), seq(1,5), seq(7,11, by=2))
+
+# Q10
+mV <- c(1,2, NA, 4)
+mV[!is.na(mV)]
+
+# Q11
+mS <- sample(1:10, 10, replace = T)
+
+# Q12
+class(mS)
+
+# Q13
+class(iris) # Clase de datos 
+sapply(iris, class) # Class de los elementos del la tabla
+str(iris) # la estructura de de los datos
+summary(iris) # un desglose de elementos de datos
+head(iris) # seccion de primeros datos
+fix(iris) #Modificar datos
+rownames(iris) # nombres de filas
+colnames(iris) # nombres de columnas
+nrow(iris) # cant de filas
+ncol(iris) # cant col
+
+# Q14
+#dataframe[num. fila de iris - 1 hasta num fila de iris, num col de iris - 1 hasta num. col de iris]
+iris[(nrow(iris)-1):nrow(iris), (ncol(iris)-1):ncol(iris)]
+
+iris[iris$Sepal.Width > 3,]
+iris[which(iris$Sepal.Width >3),]
+
+subset(iris, Species == "versicolor")
+```
+
+
+
+
+
+
+
+
+
+
