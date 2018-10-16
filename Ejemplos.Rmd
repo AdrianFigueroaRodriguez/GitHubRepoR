@@ -1,0 +1,73 @@
+---
+title: "Practicas"
+author: "Adrian Figueroa Rodriguez"
+date: "11 de octubre de 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+# Q1. Using R as a calculator
+sqrt(729)
+# Q2. Creating a numeric value
+b <- 1947.0
+# Q3. How to convert a numeric variable to character
+b <- as.character(b)
+# Q4. Setup work directory
+getwd()
+setwd("path")
+# Q5. Create an enviorment with global environment
+myEnv <- new.env()
+assign('b', 3, envir = myEnv)
+get('b', envir=myEnv)
+rm (b, envir=myEnv)
+# Q6. Create a numeric vector
+ots <- c(1,2,3,4,5,6)
+class(ots)
+me <- c(1,'a',2,'b')
+class(me)
+#Q7 Initialise Character vector
+ch <- character(26)
+ch[1] <- c("a")
+#Q8 Vector operations
+miAmigos <- c("Alberto", "Jenny", "Alex", "Juan", "Cable")
+length(miAmigos)
+miAmigos[1:2]
+miAmigos[c(2,3)]
+miAmigos[order(miAmigos)]
+sort(miAmigos)
+sort(miAmigos, decreasing = TRUE)
+miAmigos[rev(order(miAmigos))]
+#Q9. Create customiesed vector sequences
+out <- c(rep('a', 2), seq(1,5),seq(7,11))
+#Q10. Remove Missing values
+myVect <- c(1,2, NA, 4)
+myVect[!is.na(myVect)]
+#Q11. Random sampling
+samp <- sample(1:100, 50, replace = 0)
+samp
+#Q12 Checking the class
+class(samp)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

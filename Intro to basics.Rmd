@@ -1,0 +1,137 @@
+---
+title: "Prueba 1"
+author: "Adrian Figueroa Rodriguez"
+date: "4 de octubre de 2018"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown Intro to basics
+
+In this chapter, you will take your first steps with R. You will learn how to use the console as a calculator and how to assign variables. You will also get to know the basic data types in R. Let's get Started! Figueres an tables with captions will be placed in figure and table environments, respectively.
+
+### 2.1 Arithmetic with R
+
+```{r}
+# As addition
+10+14
+# As subtraction
+124-33
+# As multiplication
+30*2
+# As division
+(5+5)/2
+# As Expoentitation
+2^5
+# Type 28 %% 6 to calculate 28 modulo 6
+28%%6
+```
+
+### 2.2 Variable assignment
+
+```{r}
+# Assign the value 42 to x
+x <- 42
+
+# Print out the value of the variable x
+print(x)
+```
+
+### 2.3 variable assignment (2)
+
+```{r}
+# Assign the value 5 to the variable my_apples
+
+my_apples <- 5
+
+# Print out the value of the variable my_apples
+
+my_apples
+
+
+```
+
+### 2.4 Varialbe assignment (3)
+
+```{r}
+# Assign a value to the variables my_apples and my_oranges
+
+my_apples <- 3
+my_oranges <-6
+
+# Add these two variables together
+my_apples + my_oranges
+
+# Create the variable my_fruit
+my_fruit <- my_apples + my_oranges
+```
+
+### 2.5 Apples and oranges
+
+```{r}
+
+# Assign a value to the variable my_apples
+my_apples <-5
+
+# Fix the assignment of my_oranges
+my_oranges <- "six"
+
+#Create the variable my_fruit and print it out
+
+#my_fruit <- my_apples + my_oranges
+
+# Fix the assignent of my_oranges
+my_oranges <- 6
+
+# Create the variable my_fruit and print it out
+
+my_fruit <- my_apples + my_oranges
+my_fruit
+
+```
+
+
+### 2.6 Basic data types in R
+
+```{r}
+# Change my_numeric to be 42
+my_numeric <- 42
+
+# Change my_character to be "universe"
+my_character <- "universe"
+
+# Change my_logical to be FALSE
+my_logical <- FALSE
+```
+
+### 2.7 What's the data type?
+
+```{r}
+# Declare variables of different types:
+my_numeric <- 42
+my_character <- "universe"
+my_logical <- FALSE
+
+# Check class of my_numeric
+class(my_numeric)
+
+# Check class of my_character
+class(my_character)
+
+# Check class of my_Logical
+class(my_logical)
+
+```
+
+
+
+
+
+
+
+

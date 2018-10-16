@@ -1,0 +1,125 @@
+---
+title: "Lists"
+author: "Adrian Figueroa Rodriguez"
+date: "11 de octubre de 2018"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Lists
+
+Lists, as opposed to vectors, can hold components of different types, just like your to-do list at home or at work. This intro to R chapter will teach you how to create, name and subset these list.
+
+### 7.1 Lists, why would you need them?
+
+Vectors (one dimensional array): can hold numeric, character or logical values. The elements in a vector all have the same data type.
+
+Matrices (two dimensional array): can hold numeric, character or logical values. The elements in a matrix all have the same data type.
+
+Data frames (two-dimensional objects): can hold numeric, character or logical values. Within a column all elements have the same data type, but different columns can be of different data type.
+
+### 7.2 List, why would you need them (2)
+
+A list in R is similar to your to-do list at work or school: the different items on that list most likely differ in length, characteristic, and type of activity that has to be done.
+
+A list in R allows you to gather a variety of objects under one name (that is, the name of the list) in an ordered way. These objects can be matrices, vectors, data frames, even other lists, etc. It is not even required that these objects are related to each other in any way.
+
+You could say that a list is some kind super data type: you can store practically any piece of information in it!
+
+### 7.3 Creating a list
+
+```{r}
+# Vector with numerics from 1 to 10
+
+my_vector <- 1:10
+my_vector
+
+# Matrix with numerics from 1 up to 9
+
+my_matrix <- matrix(1:9, ncol = 3)
+my_matrix
+
+# Fist 10 elements of the built-in data frame mtcars
+
+my_df <- mtcars[1:10,1:3]
+my_df
+
+# Construct List with these different elements: 
+my_list <- list(my_vector, my_matrix, my_df)
+my_list
+
+```
+
+### 7.4 Creating a named list (2)
+
+```{r}
+mov <- "The Shining"
+act <- c("Jack Nicholson", "Shelly Duvall", "Danny Lloyd")
+
+# Creating a data frame
+
+comments <- c("Best horror Film I have Ever Seen", "A truly brilliant and scary film stanley Kubrick", "A masterpiece of psychological horror")
+
+comments
+
+scores <- c(4.5, 4, 5)
+
+sources <- c("IMDb1", "IMDb2", "IMDb3")
+sources
+
+# Create a data frame from the vectors
+rev <- data.frame(act,scores, sources, comments)
+rev
+
+# The variables mov, act and rev are available
+
+# Finish the coude to build shining_list
+shining_list <- list(moviename = mov, actors = act, score = scores, sorce = sources, reviews = rev)
+shining_list
+```
+
+### 7.5 Selecting elements from a list
+
+```{r}
+# shining_list is already pre-loaded in the workspace
+
+# Print out the vector representing the actors
+shining_list$actors
+
+# Print the second element of the vector representing the actors
+shining_list$actors[2]
+```
+
+### 7.6 Adding more movie information to the list
+
+```{r}
+# shining_list, the list containing movie name, actors and reviews, is pre-loaded in the workspace
+
+# Use c() to add a year to shining_list
+shining_list_full <- c(shining_list, year = 1980)
+shining_list_full
+
+str(shining_list_full)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
